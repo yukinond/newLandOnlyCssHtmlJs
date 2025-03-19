@@ -1,0 +1,831 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./src/output.css">
+    <title>Document</title>
+</head>
+<body>
+  
+    <header id="header" class="header">
+      
+        <div class="logo">
+          <a href="/" alt="Перейти на главную">
+            <img
+              alt="Logo"
+              class="logo__img"
+              src="https://ozonmpportal.hb.vkcs.cloud/harmex/landing1/img/logo.svg"
+              loading="lazy"
+            >
+          </a>
+        </div>
+        <nav class="header__nav !hidden lg:!flex">
+          <a href="#result" class="header__nav__link">Результативность</a>
+          <a href="#speed" class="header__nav__link">Скорость</a>
+          <a href="#for" class="header__nav__link">Для кого</a>
+          <a href="#functions" class="header__nav__link">Функции</a>
+          <a href="#price" class="header__nav__link">Цена</a>
+        </nav>
+        <div class="header__btn hidden lg:!flex">
+          <a href="https://app.harmex.ru/auth" target="_blank" rel="noopener noreferrer" class="btn-primary">
+            Войти
+          </a>
+        </div>
+
+        <button id="burger-btn" type="button" aria-label="Бургер" class="btn-circle lg:hidden !bg-transparent !border-[#E5E9EB]">
+          <div id="nav-icon3">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </button> 
+      
+         <div id="overlay" class="overlay lg:!hidden"></div>
+         <nav id="mobile-menu" class="mobile-menu fixed flex-col top-0 left-0 w-full bg-white z-50 flex gap-5 items-start justify-start py-3 px-5 lg:hidden">
+          <button type="button" aria-label="Бургер" class="btn-circle " id="close-menu">
+            <div id="nav-icon3" class="open">
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+          </button>
+          <div class="header__btn flex">
+            <a href="https://app.harmex.ru/auth" target="_blank" rel="noopener noreferrer" class="btn-primary">
+              Войти
+            </a>
+          </div>
+          <div class="mobile-nav-links flex flex-col p-1 font-medium text-[14px] leading-[17.5px] ">
+            <a id="header__nav__link" href="#result" class="header__nav__link">Результативность</a>
+            <a id="header__nav__link" href="#speed" class="header__nav__link">Скорость</a>
+            <a id="header__nav__link" href="#for" class="header__nav__link">Для кого</a>
+            <a id="header__nav__link" href="#functions" class="header__nav__link">Функции</a>
+            <a id="header__nav__link" href="#price" class="header__nav__link">Цена</a>
+          </div>
+        </nav> 
+      </header>
+
+      <section class="preview padding__block" >
+        <div class="preview__content">
+            <h1 class="preview__title">Внеконкурентные инструменты для маркетплейсов в одном интерфейсе!</h1>
+            <p class="preview__text">
+            Выведите карточку в ТОП, увеличьте продажи на <strong class="text-black">+30%</strong> и поднимите рейтинг выше 4.7
+            всего за <strong class="text-black">14</strong> дней — без сложных настроек и потери бюджета!
+            </p>
+            <div class="preview__buttons">
+            <a href="https://app.harmex.ru/auth" target="_blank" rel="noopener noreferrer" class="btn-primary">
+                Попробовать сейчас
+                <span class="ml-2">→</span>
+            </a>
+            <a href="#guide" class="btn-glass">Гайд</a>
+            </div>
+        </div>
+        <div class="preview__images">
+            <div class="preview__images__block flex flex-nowrap gap-4 z-2">
+            <div class="preview__images__item bg-[#f8f8f8] rotate-[3deg]">
+                <img src="https://ozonmpportal.hb.vkcs.cloud/harmex/landing/img/yandexMarket.png" alt="Preview" class="w-full" loading="lazy">
+            </div>
+            <div class="preview__images__item bg-[#f8f8f8] rotate-[2deg]">
+                <img src="https://ozonmpportal.hb.vkcs.cloud/harmex/landing/img/magnitMarket.png" alt="Preview" class="w-full" loading="lazy">
+            </div>
+            <div class="preview__images__item bg-white rotate-[-2deg]">
+                <img src="https://ozonmpportal.hb.vkcs.cloud/harmex/landing/img/sberMarket.png" alt="Preview" class="w-full" loading="lazy">
+            </div>
+            </div>
+            <div class="preview__images__block flex flex-nowrap gap-4 relative">
+            <div class="preview__images__item bg-[#f8f8f8] rotate-[-5deg]">
+                <img src="https://ozonmpportal.hb.vkcs.cloud/harmex/landing/img/avito.png" alt="Preview" class="w-full" loading="lazy">
+            </div>
+            <div class="preview__images__item bg-[#f8f8f8] rotate-[-2deg]">
+                <img src="https://ozonmpportal.hb.vkcs.cloud/harmex/landing/img/ozon.png" alt="Preview" class="w-full" loading="lazy">
+            </div>
+            <div class="preview__images__item bg-[#f8f8f8] rotate-[-3deg]">
+                <img src="https://ozonmpportal.hb.vkcs.cloud/harmex/landing/img/wb.png" alt="Preview" class="w-full" loading="lazy">
+            </div>
+            <div class="absolute inset-0 z-[-1] filter blur-[40px] translate-y-[30%] bg-gradient-to-r from-[#4778F5] via-[#924FE8] to-[#E6483D] opacity-50"></div>
+            </div>
+        </div>
+        </section>
+
+        <section class="preview__background mt-7 lg:mt-0">
+            <img
+            id="previewRef"
+            src="https://ozonmpportal.hb.vkcs.cloud/harmex/landing/img/preview__background.png"
+            alt="Каталог"
+            class="preview__background__img transition-transform duration-500 ease-out"
+            loading="lazy"
+            />
+        </section>
+
+        <section class="result" id="result">
+          <div class="result__text padding__block">
+            <p class="default__subtitle">Результат</p>
+            <h2 class="default__title max-w-[752px]">
+              AI-система Harmex выводит ваши товары и услуги в ТОП рекомендаций.
+            </h2>
+          </div>
+        
+          <div class="default__steps padding__block !justify-between lg:!pl-0 ">
+            <img
+              src="./img/Card1.png"
+              alt="Card img"
+              class="default__steps__img lg:order-1"
+            />
+            <div class="default__steps__text lg:order-2 mx-auto">
+              <h3 class="default__steps__title">Больше продаж, больше охватов, больше прибыли</h3>
+              <p class="default__steps__subtitle">
+                Создайте узнаваемость бренда, даже если вы только начинаете. С Harmex выход на популярные площадки становится в разы проще и быстрее. Вам не нужно разбираться в сложных алгоритмах и системах — достаточно базовых знаний и наших доступных инструментов.
+              </p>
+            </div>
+          </div>
+        
+          <div class="default__steps padding__block !justify-between lg:!pr-0 px-5">
+            <img
+              src="./img/Card2.png"
+              alt="Card img"
+              class="default__steps__img lg:order-2"
+            />
+            <div class="default__steps__text lg:order-1 mx-auto">
+              <h3 class="default__steps__title">Эффективность</h3>
+              <p class="default__steps__subtitle">
+                Harmex создан как для новичков, так и для профессионалов. Вам не нужны технические знания или сотни часов на обучение. Разберитесь за 2-3 минуты и начните использовать инструменты из нашего каталога.
+              </p>
+            </div>
+          </div>
+        
+          <div class="default__steps padding__block !justify-between lg:!pl-0">
+            <img
+              src="./img/Card3.png"
+              alt="Card img"
+              class="default__steps__img lg:order-1"
+            />
+            <div class="default__steps__text lg:order-2 mx-auto">
+              <h3 class="default__steps__title">Актуальность инструментов</h3>
+              <p class="default__steps__subtitle">
+                С Harmex любая площадка, рынок или ниша становится доступными. Запускайте, развивайте и поддерживайте свой бизнес с минимальными усилиями. Наш ассортимент дополняется на регулярной основе.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <section id="speed" class="speed default-nav padding__block">
+          <p class="default__subtitle">Скорость</p>
+        
+          <h2 class="default__title !text-left max-w-[300px] lg:max-w-[420px]">
+            Пока вы думаете, кто-то выходит в ТОП
+          </h2>
+        
+          <span class="default-nav__text">
+            <p>Привет, Хармекс на связи.</p>
+            <p>
+              Я всегда считал, что для успешного запуска и развития бизнеса по продаже
+              товаров и услуг необходимы правильные инструменты.
+            </p>
+          </span>
+        
+          <p class="default-nav__text">Инструменты, которые будут:</p>
+        
+          <div class="speed__advantages">
+            <svg width="18" height="19" viewBox="0 0 18 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M2 9.5C2 9.813 2.461 10.358 3.53 10.893C4.914 11.585 6.877 12 9 12C11.123 12 13.086 11.585 14.47 10.893C15.539 10.358 16 9.813 16 9.5V7.329C14.35 8.349 11.827 9 9 9C6.173 9 3.65 8.348 2 7.329V9.5ZM16 12.329C14.35 13.349 11.827 14 9 14C6.173 14 3.65 13.348 2 12.329V14.5C2 14.813 2.461 15.358 3.53 15.893C4.914 16.585 6.877 17 9 17C11.123 17 13.086 16.585 14.47 15.893C15.539 15.358 16 14.813 16 14.5V12.329ZM0 14.5V4.5C0 2.015 4.03 0 9 0C13.97 0 18 2.015 18 4.5V14.5C18 16.985 13.97 19 9 19C4.03 19 0 16.985 0 14.5ZM9 7C11.123 7 13.086 6.585 14.47 5.893C15.539 5.358 16 4.813 16 4.5C16 4.187 15.539 3.642 14.47 3.107C13.086 2.415 11.123 2 9 2C6.877 2 4.914 2.415 3.53 3.107C2.461 3.642 2 4.187 2 4.5C2 4.813 2.461 5.358 3.53 5.893C4.914 6.585 6.877 7 9 7Z" fill="#E86B35"/>
+            </svg>
+            <span class="speed__advantages__text"
+              >Безопасны — без рисков для репутации и финансов.</span
+            >
+          </div>
+        
+          <div class="speed__advantages">
+            <svg width="19" height="22" viewBox="0 0 19 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M8 13V15C6.4087 15 4.88258 15.6321 3.75736 16.7574C2.63214 17.8826 2 19.4087 2 21H0C0 18.8783 0.842855 16.8434 2.34315 15.3431C3.84344 13.8429 5.87827 13 8 13ZM8 12C4.685 12 2 9.315 2 6C2 2.685 4.685 0 8 0C11.315 0 14 2.685 14 6C14 9.315 11.315 12 8 12ZM8 10C10.21 10 12 8.21 12 6C12 3.79 10.21 2 8 2C5.79 2 4 3.79 4 6C4 8.21 5.79 10 8 10ZM17.446 19.032L18.95 20.536L17.536 21.95L16.032 20.446C15.1933 20.9405 14.2031 21.1121 13.247 20.9288C12.2908 20.7454 11.4343 20.2196 10.8381 19.4499C10.2419 18.6802 9.94688 17.7195 10.0083 16.7479C10.0698 15.7762 10.4835 14.8604 11.1719 14.1719C11.8604 13.4835 12.7762 13.0698 13.7479 13.0083C14.7195 12.9469 15.6802 13.2419 16.4499 13.8381C17.2196 14.4343 17.7454 15.2908 17.9288 16.247C18.1121 17.2031 17.9405 18.1933 17.446 19.032ZM14 19C14.5304 19 15.0391 18.7893 15.4142 18.4142C15.7893 18.0391 16 17.5304 16 17C16 16.4696 15.7893 15.9609 15.4142 15.5858C15.0391 15.2107 14.5304 15 14 15C13.4696 15 12.9609 15.2107 12.5858 15.5858C12.2107 15.9609 12 16.4696 12 17C12 17.5304 12.2107 18.0391 12.5858 18.4142C12.9609 18.7893 13.4696 19 14 19Z" fill="#E86B35"/>
+            </svg>
+              
+            <span class="speed__advantages__text"
+              >Просты в использовании — интуитивно понятны даже новичку.</span
+            >
+          </div>
+        
+          <div class="speed__advantages">
+            <svg width="18" height="16" viewBox="0 0 18 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M8 0H18V2H8V0ZM8 4H14V6H8V4ZM8 10H18V12H8V10ZM8 14H14V16H8V14ZM0 0H6V6H0V0ZM2 2V4H4V2H2ZM0 10H6V16H0V10ZM2 12V14H4V12H2Z" fill="#E86B35"/>
+            </svg>
+            <span class="speed__advantages__text"
+              >Эффективны — без долгих обучений, технических сложностей и постоянных
+              обращений в поддержку.</span
+            >
+          </div>
+        
+          <div class="speed__paragraphes">
+            <p class="default-nav__text">
+              Именно поэтому я создал Harmex. Я верю, что каждый может значительно
+              повысить свою эффективность за счет автоматизации.
+            </p>
+            <p class="default-nav__text">
+              Вместе мы создаем не просто инструменты, а сообщество, которое помогает
+              друг другу достигать целей и строить тот стиль жизни, о котором мечтает.
+            </p>
+            <p class="default-nav__text">
+              Эта вера лежит в основе всего, что мы делаем.
+            </p>
+          </div>
+        
+          <img
+            src="https://ozonmpportal.hb.vkcs.cloud/harmex/landing/img/speedImg.png"
+            alt="Изображение"
+            class="speed__img"
+            loading="lazy"
+          />
+        </section>
+
+        <section class="speed-tasks padding__block">
+          <div class="speed-tasks__content">
+            <div class="speed-tasks__card">
+              <h4 class="speed-tasks__card__title">Инструментарий</h4>
+              <p class="speed-tasks__card__subtitle">
+                Доступный каталог решений и возможность запросить то, что нужно именно вам, — это то, что делает Harmex уникальным.
+              </p>
+              <ul class="speed-tasks__card__list">
+                <li class="speed-tasks__card__list__item">
+                  <span class="speed-tasks__card__list__item__task">
+                    Более 20 популярных площадок:
+                  </span>
+                  <p class="speed-tasks__card__list__item__description">
+                    Wildberries, Ozon, Avito, Яндекс.Маркет, СберМегаМаркет и другие.
+                  </p>
+                </li>
+                <li class="speed-tasks__card__list__item">
+                  <span class="speed-tasks__card__list__item__task">
+                    Быстрая служба заботы:
+                  </span>
+                  <p class="speed-tasks__card__list__item__description">
+                    Мы всегда рядом, чтобы помочь.
+                  </p>
+                </li>
+                <li class="speed-tasks__card__list__item">
+                  <span class="speed-tasks__card__list__item__task">
+                    Полная автоматизация:
+                  </span>
+                  <p class="speed-tasks__card__list__item__description">
+                    Экономьте время и ресурсы, доверя рутину нам.
+                  </p>
+                </li>
+              </ul>
+            </div>
+        
+            <div class="speed-tasks__card">
+              <h4 class="speed-tasks__card__title">Персонализация</h4>
+              <p class="speed-tasks__card__subtitle">
+                Наш виртуальный AI-ассистент всегда на связи, чтобы помочь вам на каждом этапе.
+              </p>
+              <ul class="speed-tasks__card__list">
+                <li class="speed-tasks__card__list__item">
+                  <span class="speed-tasks__card__list__item__task">
+                    От постановки задачи до реализации:
+                  </span>
+                  <p class="speed-tasks__card__list__item__description">
+                    Мы сопровождаем вас на всех этапах.
+                  </p>
+                </li>
+                <li class="speed-tasks__card__list__item">
+                  <span class="speed-tasks__card__list__item__task">
+                    Пошаговое руководство:
+                  </span>
+                  <p class="speed-tasks__card__list__item__description">
+                    Четкие инструкции и поддержка до достижения результата.
+                  </p>
+                </li>
+                <li class="speed-tasks__card__list__item">
+                  <span class="speed-tasks__card__list__item__task">
+                    Управление процессом:
+                  </span>
+                  <p class="speed-tasks__card__list__item__description">
+                    Даже если нужно привлечь сторонних исполнителей, мы берем это на себя.
+                  </p>
+                </li>
+              </ul>
+            </div>
+        
+            <div class="speed-tasks__card">
+              <h4 class="speed-tasks__card__title">Многозадачность</h4>
+              <p class="speed-tasks__card__subtitle">
+                Раньше считалось, что одновременное ведение нескольких проектов приводит к выгоранию, а использование множества инструментов — к расфокусу. С Harmex этот миф разрушен навсегда.
+              </p>
+              <ul class="speed-tasks__card__list">
+                <li class="speed-tasks__card__list__item">
+                  <span class="speed-tasks__card__list__item__task">
+                    Управление любым количеством инструментов:
+                  </span>
+                  <p class="speed-tasks__card__list__item__description">
+                    Все в одном месте, без хаоса.
+                  </p>
+                </li>
+                <li class="speed-tasks__card__list__item">
+                  <span class="speed-tasks__card__list__item__task">
+                    Умные напоминания и оповещения:
+                  </span>
+                  <p class="speed-tasks__card__list__item__description">
+                    Ничто не ускользнет от вашего внимания.
+                  </p>
+                </li>
+                <li class="speed-tasks__card__list__item">
+                  <span class="speed-tasks__card__list__item__task">
+                    Упрощение контроля:
+                  </span>
+                  <p class="speed-tasks__card__list__item__description">
+                    Контролируйте все сферы бизнеса и жизни легко и эффективно.
+                  </p>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <a
+            href="https://app.harmex.ru/auth"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="btn-primary w-fit"
+          >
+            Попробовать сейчас
+            <span class="ml-2 !w-4 !h-4">→</span>
+          </a>
+        </section>
+
+        <section class="for default-nav padding__block" id="for">
+          <p class="default__subtitle">Для кого?</p>
+        
+          <h2 class="default__title !text-left max-w-[720px] lg:max-w-none">
+            Подходит ли Harmex для ваших целей?
+          </h2>
+        
+          <p class="default-nav__text">
+            Определите, соответствует ли Harmex вашим целям и задачам.
+          </p>
+        
+          <div class="for__content">
+            <div class="for__cards">
+              <div class="flex flex-col gap-5 flex-1 bg-[#F9F9F9] rounded-[20px] p-5">
+                <h3 class="font-bold text-lg">Это не для вас, если:</h3>
+                <ul class="flex flex-col gap-[15px]">
+                  <li class="flex items-start gap-2">
+                    <img src="./img/close.svg" alt="" class="flex-shrink-0 mt-2 w-3 h-3 ">
+                    Вы не планируете продвигать и продавать свои товары и услуги.
+                  </li>
+                  <li class="flex items-start gap-2">
+                    <img src="./img/close.svg" alt="" class="flex-shrink-0 mt-2 w-3 h-3">
+                    Вы не готовы повышать позиции, продажи и рейтинг на площадке.
+                  </li>
+                  <li class="flex items-start gap-2">
+                    <img src="./img/close.svg" alt="" class="flex-shrink-0 mt-2 w-3 h-3">
+                    Увеличение дохода не входит в ваши приоритеты.
+                  </li>
+                  <li class="flex items-start gap-2">
+                    <img src="./img/close.svg" alt="" class="flex-shrink-0 mt-2 w-3 h-3">
+                    Вы не заинтересованы в поддержке, помощи и экономии времени.
+                  </li>
+                  <li class="flex items-start gap-2">
+                    <img src="./img/close.svg" alt="" class="flex-shrink-0 mt-2 w-3 h-3">
+                    Вы не готовы выстраивать отношения с покупателями.
+                  </li>
+                  <li class="flex items-start gap-2">
+                    <img src="./img/close.svg" alt="" class="flex-shrink-0 mt-2 w-3 h-3">
+                    Для вас не важны безопасность финансов, выкупов и публикация отзывов.
+                  </li>
+                </ul>
+              </div>
+        
+              <div class="flex flex-col gap-5 flex-1 bg-[#F9F9F9] rounded-[20px] p-5">
+                <h3 class="font-bold text-lg">Это для вас, если:</h3>
+                <ul class="flex flex-col gap-[15px]">
+                  <li class="flex items-start gap-2">
+                    <img class="w-5 h-5 flex-shrink-0 mt-1" src="./img/success.svg" alt="check">
+                    <!-- <span class="text-[#36BC04] !w-5 !h-5 flex-shrink-0 mt-1">✓</span> -->
+                    Вы хотите продавать больше и быстрее, используя передовые инструменты.
+                  </li>
+                  <li class="flex items-start gap-2">
+                    <img class="w-5 h-5 flex-shrink-0 mt-1" src="./img/success.svg" alt="check">
+                    Вы ищете саморазвивающуюся платформу, которая растет вместе с вами.
+                  </li>
+                  <li class="flex items-start gap-2">
+                    <img class="w-5 h-5 flex-shrink-0 mt-1" src="./img/success.svg" alt="check">
+                    Вы активны и готовы защищать свой бизнес от конкурентов и их негатива.
+                  </li>
+                  <li class="flex items-start gap-2">
+                    <img class="w-5 h-5 flex-shrink-0 mt-1" src="./img/success.svg" alt="check">
+                    Вы постоянно добавляете в каталог новые товары и услуги.
+                  </li>
+                  <li class="flex items-start gap-2">
+                    <img class="w-5 h-5 flex-shrink-0 mt-1" src="./img/success.svg" alt="check">
+                    Вы стремитесь использовать популярные площадки для создания стабильного дохода и достойного стиля жизни на долгие годы.
+                  </li>
+                </ul>
+              </div>
+            </div>
+        
+            <a
+              href="https://app.harmex.ru/auth"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="btn-primary w-fit"
+            >
+              Попробовать сейчас
+              <span class="ml-2 !w-4 !h-4">→</span>
+            </a>
+          </div>
+        </section>
+
+        <section class="functions default-nav padding__block" id="functions">
+          <p class="default__subtitle">Функции</p>
+        
+          <h2 class="default__title !text-left">Итак…как это работает?</h2>
+        
+          <p class="default-nav__text">
+            Узнайте, как начать свой путь с помощью наших интуитивно понятных инструментов.
+          </p>
+        
+          <div class="default__steps padding-y__block !justify-between overflow-hidden">
+            <div class="w-full bg-[#F7F7F7] lg:max-w-[520px] min-h-[300px] sm:min-h-[460px] flex justify-center items-end rounded-3xl relative lg:order-1">
+              <div class="bg-black w-[70%] h-[90%] min-h-[280px] sm:min-h-[430px] rounded-t-[55px] flex justify-center relative sm:min-w-[364px]">
+                <div class="bg-black w-[75px] h-[25px] z-10 rounded-full mt-5"></div>
+                <div class="bg-black h-[30px] w-[2px] absolute -left-0.5 rounded-l-full translate-y-24"></div>
+                <div class="bg-black h-[55px] w-[2px] absolute -left-0.5 rounded-l-full translate-y-40"></div>
+                <div class="bg-black h-[55px] w-[2px] absolute -left-0.5 rounded-l-full translate-y-56"></div>
+                <div class="bg-black h-[75px] w-[2px] absolute -right-0.5 rounded-r-full translate-y-40 lg:translate-y-56"></div>
+                <div class="absolute w-[95%] h-[98%] bg-white rounded-t-[50px] bottom-0 left-1/2 transform -translate-x-1/2 overflow-hidden">
+                  <img
+                    src="https://ozonmpportal.hb.vkcs.cloud/harmex/landing/img/step1.png"
+                    class="w-full transition-transform duration-300 ease-out object-cover"
+                    id="stepImage1"
+                  />
+                </div>
+              </div>
+            </div>
+        
+            <div class="default__steps__text flex flex-col items-start justify-center lg:order-2">
+              <p class="default__steps__number">01</p>
+              <h3 class="default__steps__title">Пополните баланс</h3>
+              <p class="default__steps__subtitle">
+                Вы можете пополнить баланс с физической карты, бизнес-карты или расчётного счёта — быстро и удобно.
+              </p>
+            </div>
+          </div>
+        
+          <div class="default__steps padding-y__block !justify-between overflow-hidden">
+            <div class="w-full bg-[#F7F7F7] lg:max-w-[520px] min-h-[300px] sm:min-h-[460px] flex justify-center items-end rounded-3xl relative lg:order-2">
+              <div class="bg-black w-[70%] h-[90%] min-h-[280px] sm:min-h-[430px] rounded-t-[55px] flex justify-center relative sm:min-w-[364px]">
+                <div class="bg-black w-[75px] h-[25px] z-10 rounded-full mt-5"></div>
+                <div class="bg-black h-[30px] w-[2px] absolute -left-0.5 rounded-l-full translate-y-24"></div>
+                <div class="bg-black h-[55px] w-[2px] absolute -left-0.5 rounded-l-full translate-y-40"></div>
+                <div class="bg-black h-[55px] w-[2px] absolute -left-0.5 rounded-l-full translate-y-56"></div>
+                <div class="bg-black h-[75px] w-[2px] absolute -right-0.5 rounded-r-full translate-y-40 lg:translate-y-56"></div>
+                <div class="absolute w-[95%] h-[98%] bg-white rounded-t-[50px] bottom-0 left-1/2 transform -translate-x-1/2 overflow-hidden">
+                  <img
+                    src="https://ozonmpportal.hb.vkcs.cloud/harmex/landing/img/step2.png"
+                    class="w-full transition-transform duration-300 ease-out object-cover"
+                    id="stepImage2"
+                  />
+                </div>
+              </div>
+            </div>
+        
+            <div class="default__steps__text flex flex-col items-start justify-center lg:order-1">
+              <p class="default__steps__number">02</p>
+              <h3 class="default__steps__title">Выберите услугу</h3>
+              <p class="default__steps__subtitle">
+                Ознакомьтесь с каталогом услуг или запросите необходимую услугу, подходящую для вашего бизнеса.
+              </p>
+            </div>
+          </div>
+        
+          <div class="default__steps padding-y__block !justify-between overflow-hidden">
+            <div class="w-full bg-[#F7F7F7] lg:max-w-[520px] min-h-[300px] sm:min-h-[460px] flex justify-center items-end rounded-3xl relative lg:order-1">
+              <div class="bg-black w-[70%] h-[90%] min-h-[280px] sm:min-h-[430px] rounded-t-[55px] flex justify-center relative sm:min-w-[364px]">
+                <div class="bg-black w-[75px] h-[25px] z-10 rounded-full mt-5"></div>
+                <div class="bg-black h-[30px] w-[2px] absolute -left-0.5 rounded-l-full translate-y-24"></div>
+                <div class="bg-black h-[55px] w-[2px] absolute -left-0.5 rounded-l-full translate-y-40"></div>
+                <div class="bg-black h-[55px] w-[2px] absolute -left-0.5 rounded-l-full translate-y-56"></div>
+                <div class="bg-black h-[75px] w-[2px] absolute -right-0.5 rounded-r-full translate-y-40 lg:translate-y-56"></div>
+                <div class="absolute w-[95%] h-[98%] bg-white rounded-t-[50px] bottom-0 left-1/2 transform -translate-x-1/2 overflow-hidden">
+                  <img
+                    src="https://ozonmpportal.hb.vkcs.cloud/harmex/landing/img/step3.png"
+                    class="w-full transition-transform duration-300 ease-out object-cover"
+                    id="stepImage3"
+                  />
+                </div>
+              </div>
+            </div>
+        
+            <div class="default__steps__text flex flex-col items-start justify-center lg:order-2">
+              <p class="default__steps__number">03</p>
+              <h3 class="default__steps__title">Создайте заказ</h3>
+              <p class="default__steps__subtitle">
+                Запланируйте выполнение заказа в любое удобное время — услуга будет выполнена точно в срок.
+              </p>
+            </div>
+          </div>
+        
+          <div class="default__steps padding-y__block !justify-between overflow-hidden">
+            <div class="w-full bg-[#F7F7F7] lg:max-w-[520px] min-h-[300px] sm:min-h-[460px] flex justify-center items-end rounded-3xl relative lg:order-2">
+              <div class="bg-black w-[70%] h-[90%] min-h-[280px] sm:min-h-[430px] rounded-t-[55px] flex justify-center relative sm:min-w-[364px]">
+                <div class="bg-black w-[75px] h-[25px] z-10 rounded-full mt-5"></div>
+                <div class="bg-black h-[30px] w-[2px] absolute -left-0.5 rounded-l-full translate-y-24"></div>
+                <div class="bg-black h-[55px] w-[2px] absolute -left-0.5 rounded-l-full translate-y-40"></div>
+                <div class="bg-black h-[55px] w-[2px] absolute -left-0.5 rounded-l-full translate-y-56"></div>
+                <div class="bg-black h-[75px] w-[2px] absolute -right-0.5 rounded-r-full translate-y-40 lg:translate-y-56"></div>
+                <div class="absolute w-[95%] h-[98%] bg-white rounded-t-[50px] bottom-0 left-1/2 transform -translate-x-1/2 overflow-hidden">
+                  <img
+                    src="https://ozonmpportal.hb.vkcs.cloud/harmex/landing/img/step4.png"
+                    class="w-full transition-transform duration-300 ease-out object-cover"
+                    id="stepImage4"
+                  />
+                </div>
+              </div>
+            </div>
+        
+            <div class="default__steps__text flex flex-col items-start justify-center lg:order-1">
+              <p class="default__steps__number">04</p>
+              <h3 class="default__steps__title">Получите отчетность</h3>
+              <p class="default__steps__subtitle">
+                Вся информация о финансовых операциях, выполнении услуг и результатах доступна в вашем личном кабинете.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <section class="price default-nav padding__block" id="price">
+          <p class="default__subtitle">Цена</p>
+        
+          <h2 class="default__title !text-left">Тарифные планы</h2>
+        
+          <p class="default-nav__text max-w-[570px]">
+            Harmex предлагает гибкие и выгодные планы, которые позволяют вам заказывать только то, что нужно, и в том объеме, который подходит именно вам.
+          </p>
+        
+          <div class="price__content">
+            <div class="price__cards">
+              <div class="price__card bg-custom-gradient">
+                <div class="price__card__text">
+                  <p class="price__card__text__title">План A: Вывод в ТОП</p>
+                  <p class="text-[#737373]">
+                    Ощутите уровень удобства, автоматизации и комфорта премиум-класса.
+                  </p>
+                </div>
+        
+                <div class="border-t border-gray-200"></div>
+        
+                <div>
+                  <p class="text-3xl lg:text-5xl font-semibold">от 250 рублей</p>
+                  <p class="text-[#737373] text-2xl">за услугу выкупа, отзыва, без забора</p>
+                </div>
+        
+                <a
+                  href="https://app.harmex.ru/auth"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="btn-glass"
+                >
+                  Присоединиться сейчас
+                  <img class="w-3 h-3 flex-shrink-0 ml-2 mt-1" src="./img/nextBlack.svg" alt="arrow">
+                </a>
+        
+                <ul class="price__card__features">
+                  <li class="price__card__features__item">
+                    <img class="w-5 h-5 flex-shrink-0 mt-1" src="./img/success.svg" alt="check">
+                    <div>
+                      <p class="font-bold leading-6">Гибкие платежи:</p>
+                      <p class="text-[#171717] leading-6">
+                        Пополняйте баланс в удобной для вас валюте.
+                      </p>
+                    </div>
+                  </li>
+                  <li class="price__card__features__item">
+                    <img class="w-5 h-5 flex-shrink-0 mt-1" src="./img/success.svg" alt="check">
+                    <div>
+                      <p class="font-bold leading-6">Полный доступ:</p>
+                      <p class="text-[#171717] leading-6">
+                        Наслаждайтесь всеми функциями, инструментами и поддержкой 24/7.
+                      </p>
+                    </div>
+                  </li>
+                  <li class="price__card__features__item">
+                    <img class="w-5 h-5 flex-shrink-0 mt-1" src="./img/success.svg" alt="check">
+                    <div>
+                      <p class="font-bold leading-6">Неограниченный ассортимент:</p>
+                      <p class="text-[#171717] leading-6">
+                        Используйте автоматизированные решения для повышения узнаваемости и увеличения продаж.
+                      </p>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+        
+              <div class="price__card bg-custom-gradient-2">
+                <div class="price__card__text">
+                  <p class="price__card__text__title">План Б: AI-ассистенты</p>
+                  <p class="text-[#737373]">
+                    Увеличьте свою продуктивность и благосостояние, используя все преимущества нашего AI-ассистента.
+                  </p>
+                </div>
+        
+                <div class="border-t border-gray-200"></div>
+        
+                <div>
+                  <p class="text-3xl lg:text-5xl font-semibold">от 500 рублей</p>
+                  <p class="text-[#737373] text-2xl">за инструмент</p>
+                </div>
+        
+                <a
+                  href="https://app.harmex.ru/auth"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="btn-primary"
+                >
+                  Присоединиться сейчас
+                  <img class="w-3 h-3 flex-shrink-0 ml-2 mt-1" src="./img/next.svg" alt="arrow">
+                </a>
+        
+                <ul class="price__card__features">
+                  <li class="price__card__features__item">
+                    <img class="w-5 h-5 flex-shrink-0 mt-1" src="./img/success.svg" alt="check">
+                    <div>
+                      <p class="font-bold leading-6">Лучшее соотношение цены и качества:</p>
+                      <p class="text-[#171717] leading-6">
+                        Экономьте больше, совершив единовременный платеж со скидкой.
+                      </p>
+                    </div>
+                  </li>
+                  <li class="price__card__features__item">
+                    <img class="w-5 h-5 flex-shrink-0 mt-1" src="./img/success.svg" alt="check">
+                    <div>
+                      <p class="font-bold leading-6">Полный доступ:</p>
+                      <p class="text-[#171717] leading-6">
+                        Бесперебойный доступ ко всем функциям, инструментам и запросам.
+                      </p>
+                    </div>
+                  </li>
+                  <li class="price__card__features__item">
+                    <img class="w-5 h-5 flex-shrink-0 mt-1" src="./img/success.svg" alt="check">
+                    <div>
+                      <p class="font-bold leading-6">Экономически эффективно:</p>
+                      <p class="text-[#171717] leading-6">
+                        Идеально для тех, кто стремится разгрузить себя и повысить эффективность.
+                      </p>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="price mb-20" id="guide">
+          <div class="padding__block default-nav lg:!flex !contents">
+            <p class="default__subtitle order-1 lg:order-none px-5 pt-16 lg:px-0 lg:pt-0">
+              Гайд
+            </p>
+        
+            <h2 class="text-3xl lg:text-5xl font-semibold max-w-[1048px] !text-left order-2 lg:order-none px-5 lg:px-0 py-6 lg:py-0">
+              Как повысить заказы в карточке товара или услуги на любой площадке?
+            </h2>
+        
+            <div class="price__container">
+              <p class="default-nav__text max-w-[580px] order-3 lg:order-none px-5 lg:px-0 pb-16 lg:pb-0">
+                Пошаговый гайд от Harmex, основанный на статистике выкупов 10 000 SKU и данных с пяти популярных площадок.
+              </p>
+              <div id="carousel_btns" class="price__btns order-5 lg:order-none mt-16 lg:mt-0">
+                <button id="left" class="price__btn" id="prevSlide">
+                  <svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M7 1L1 7L7 13" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                    
+                </button>
+                <button id="right" class="price__btn" id="nextSlide">
+                  <svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1 13L7 7L1 1" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+        
+          <div class="carousel__slider order-4 lg:order-none ">
+            <div class="wrapper">
+              <i id="left" class="fa-solid fa-angle-left"></i>
+              <ul class="carousel  w-[250%] translate-x-[-31%] sm:w-[120%] sm:translate-x-[-10%] !gap-4 lg:!gap-8 overflow-visible">
+                <li class="card">
+                  <div class="img"><img src="https://ozonmpportal.hb.vkcs.cloud/harmex/landing/img/1.jpg" alt="img" draggable="false"></div>
+                </li>
+                <li class="card">
+                  <div class="img"><img src="https://ozonmpportal.hb.vkcs.cloud/harmex/landing/img/2.jpg" alt="img" draggable="false"></div>
+                </li>
+                <li class="card">
+                  <div class="img"><img src="https://ozonmpportal.hb.vkcs.cloud/harmex/landing/img/3.jpg" alt="img" draggable="false"></div>
+                </li>
+                <li class="card">
+                  <div class="img"><img src="https://ozonmpportal.hb.vkcs.cloud/harmex/landing/img/4.jpg" alt="img" draggable="false"></div>
+                </li>
+                <li class="card">
+                  <div class="img"><img src="https://ozonmpportal.hb.vkcs.cloud/harmex/landing/img/5.jpg" alt="img" draggable="false"></div>
+                </li>
+                <li class="card">
+                  <div class="img"><img src="https://ozonmpportal.hb.vkcs.cloud/harmex/landing/img/6.jpg" alt="img" draggable="false"></div>
+                </li>
+                <li class="card">
+                  <div class="img"><img src="https://ozonmpportal.hb.vkcs.cloud/harmex/landing/img/7.jpg" alt="img" draggable="false"></div>
+                </li>
+                <li class="card">
+                  <div class="img"><img src="https://ozonmpportal.hb.vkcs.cloud/harmex/landing/img/8.jpg" alt="img" draggable="false"></div>
+                </li>
+                <li class="card">
+                  <div class="img"><img src="https://ozonmpportal.hb.vkcs.cloud/harmex/landing/img/9.jpg" alt="img" draggable="false"></div>
+                </li>
+              </ul>
+              <i id="right" class="fa-solid fa-angle-right"></i>
+            </div>
+          </div>
+        </section>
+
+
+
+      <footer id="footer" class="footer">
+        <div class="footer__content sm:flex-nowrap flex-wrap">
+          <div class="flex gap-12 lg:gap-20 lg:justify-between items-start w-full flex-wrap lg:flex-nowrap">
+            <img
+              alt="log-white"
+              src="https://ozonmpportal.hb.vkcs.cloud/harmex/landing1/img/footer/logo-white.svg"
+              class="w-full max-w-[139px] min-h-[44px]"
+              loading="lazy"
+            />
+            <div class="flex gap-6 justify-start flex-wrap lg:flex-nowrap lg:justify-end w-full">
+              <div class="flex flex-col gap-2 text-white w-[180px]">
+                <p class="text-[#FFFFFF99]">Продукт</p>
+                <a href="#result">Результативность</a>
+                <a href="#speed">Скорость</a>
+                <a href="#for">Для кого</a>
+                <a href="#functions">Функции</a>
+                <a href="#price">Цена</a>
+              </div>
+              <div class="flex flex-col gap-2 text-white">
+                <p class="text-[#FFFFFF99]">Документы</p>
+                <a href="./files/docs/conf_policy.pdf" target="_blank" rel="noopener noreferrer">
+                  Политика конфиденциальности
+                </a>
+                <a href="./files/docs/oferta.pdf" target="_blank" rel="noopener noreferrer">
+                  Пользовательское соглашение
+                </a>
+              </div>
+            </div>
+          </div>
+      
+          <div class="flex sm:flex-row flex-col justify-end gap-12 w-full">
+            <div class="flex flex-col gap-4 justify-end items-end text-white order-last self-end w-full sm:w-auto">
+              <a class="text-base font-[600]" href="tel:+79647265061">+7 964 726-50-61</a>
+              <a class="font-[500] text-sm flex gap-3 items-center"
+                href="https://t.me/HarmexSupport_bot" target="_blank" rel="noopener noreferrer">
+                <img alt="Support" src="https://ozonmpportal.hb.vkcs.cloud/harmex/landing1/img/footer/support.svg"
+                  class="w-5 h-5" loading="lazy" />
+                Служба заботы
+              </a>
+              <a class="font-[500] text-sm flex gap-3 items-center"
+                href="https://t.me/+gQ834W_1awM4ZTky" target="_blank" rel="noopener noreferrer">
+                <img alt="Telegram" src="https://ozonmpportal.hb.vkcs.cloud/harmex/landing1/img/footer/tg.svg"
+                  class="w-5 h-5" loading="lazy" />
+                Telegram-канал Harmex
+              </a>
+              <a class="mb-2 text-sm text-[#47A4D2]" href="mailto:info@harmex.ru">info@harmex.ru</a>
+      
+              <div class="mb-2 text-right flex flex-col gap-1.5">
+                <p class="text-sm">г. Пенза, ул. Суворова, 167, оф.11</p>
+                <p class="text-[14px] text-[#ADADAD]">
+                  Пн-Пт: с 8:00 до 20:00, Сб-Вс: с 10:00 до 18:00
+                </p>
+              </div>
+      
+              <div class="flex gap-3 items-center">
+                <span class="text-sm text-[#ADADAD]">Наверх</span>
+                <button id="scrollTopBtn" type="button" aria-label="Наверх"
+                  class="bg-primary w-7 h-7 flex items-center justify-center cursor-pointer rounded-md">
+                  <svg id="scrollTopBtn" class="w-5 h-5 text-white cursor-pointer" viewBox="0 0 24 24" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path d="M5 15l7-7 7 7" stroke="currentColor" stroke-width="2"
+                      stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      
+        <div class="pt-12 lg:pt-0 lg:-mt-5 flex lg:flex-row flex-col justify-center lg:justify-between text-[14px] leading-[17.5px] gap-12">
+          <p class="text-white text-center lg:text-left">
+            © <span id="currentYear"></span> HARMEX Все права защищены.
+          </p>
+        </div>
+      </footer>
+      
+      
+      
+      <script src="./script.js"></script>
+</body>
+</html>
